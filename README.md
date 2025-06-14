@@ -1,6 +1,6 @@
 # Video2x Mac环境安装
 
-- Video2X没有Mac安装包，需要手动下载
+- Video2X没有Mac安装包，需要手动编译
 
 ## 安装依赖
 
@@ -153,7 +153,7 @@ CC=$(brew --prefix llvm)/bin/clang CXX=$(brew --prefix llvm)/bin/clang++ cmake -
 ./video2x -i input.mp4 -o output2.mp4 -p realcugan  -s 4 --realesrgan-model realesrgan-plus
 ```
 
-- ***<u>必须指定`-p realcugan`参数运行，调用其他参数进行GPU计算会空指针coredump，原因未知</u>***
+- ***<u><mark>必须指定`-p realcugan`参数运行，调用其他参数进行GPU计算会空出错，原因未知</mark></u>***
 
 ### 模型
 
