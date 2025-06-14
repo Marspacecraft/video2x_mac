@@ -1,6 +1,7 @@
 # Video2x Mac环境安装
 
-- Video2X没有Mac安装包，需要手动编译
+- ###### Video2X没有Mac安装包，需要手动编译
+- ###### <u>只支持`-p realcugan`参数</u>
 
 ## 安装依赖
 
