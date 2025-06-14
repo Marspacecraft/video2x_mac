@@ -151,16 +151,15 @@ CC=$(brew --prefix llvm)/bin/clang CXX=$(brew --prefix llvm)/bin/clang++ cmake -
 ### 命令
 
 ```bash
-./video2x -i input.mp4 -o output2.mp4 -p realcugan  -s 4 --realesrgan-model realesrgan-plus
+./video2x -i input.mp4 -o output2.mp4 -p realcugan  -s 4 --realcugan-model models-se
 ```
 
 - ***<u><mark>必须指定`-p realcugan`参数运行，调用其他参数进行GPU计算会空出错，原因未知</mark></u>***
 
 ### 模型
 
-| 模型                      | 技术    | 特点           | 场景              |
-| ----------------------- | ----- | ------------ | --------------- |
-| `realesr-animevideov3`  | 非 GAN | 平滑、干净、线条锐利   | 动漫、卡通（首选）       |
-| `realesrgan-plus-anime` | GAN   | 细节丰富、非常锐利    | 动漫、卡通（追求极致细节时）  |
-| `realesrgan-plus`       | GAN   | 细节丰富、纹理感强、锐利 | 真人电影、CG、风景（首选）  |
-| `realesr-generalv3`     | 非 GAN | 自然、柔和、伪影少    | 真人电影、人像（追求自然感时） |
+| 模型            | 作用         | 场景                   |
+| ------------- | ---------- | -------------------- |
+| `models-se`   | 放大分辨率 + 降噪 | 效果均衡的主力模型，大多数情况下的首选。 |
+| `models-pro`  | 放大分辨率 + 降噪 | se 的备选方案，风格略有不同。     |
+| `models-nose` | 仅降噪        | 只清理画质，不改变视频原始分辨率。    |
