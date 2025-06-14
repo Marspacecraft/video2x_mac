@@ -1,0 +1,5 @@
+#!/bin/bash
+# 定位到当前脚本所在目录
+cd "$(dirname "$0")"
+# 调用系统 Python3 运行你的脚本（也可以指定虚拟环境或打包环境）
+exec /opt/homebrew/bin/python3 script.py

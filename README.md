@@ -156,6 +156,23 @@ CC=$(brew --prefix llvm)/bin/clang CXX=$(brew --prefix llvm)/bin/clang++ cmake -
 
 - ***<u><mark>必须指定`-p realcugan`参数运行，调用其他参数进行GPU计算会空出错，原因未知</mark></u>***
 
+### app应用
+
+- Video2X.app为手动构建的app应用
+
+- 内涵一个python界面程序
+
+- 如果无法运行，修改`Video2X.app/Contents/MacOS/Video2X `中的pyton路径
+
+- Video2X需要执行权限`chmod u+x Video2X`
+
+```bash
+#!/bin/bash
+cd "$(dirname "$0")"
+# 调用系统 Python3 运行你的脚本（也可以指定虚拟环境或打包环境）
+exec /opt/homebrew/bin/python3 script.py
+```
+
 ### 模型
 
 | 模型            | 作用         | 场景                   |
